@@ -7,8 +7,7 @@
 <div ng-class="{ connected: connected }" class="dashboard">
   <div class="sensor">
     <span>Porta</span>
-    <strong class="sensor-value" ng-show="!data.button">Aberta</strong>
-    <strong class="sensor-value small" ng-show="data.button">Fechada</strong>
+    <strong class="sensor-value">{{ data.button }}</strong>
   </div>
 
   <div class="sensor">

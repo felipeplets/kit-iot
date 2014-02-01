@@ -18,13 +18,8 @@ KitIoT.io.on('connection', function (socket) {
 
   //Start sending/saving data
   socket.on('start', function () {
-    if (!KitIoT.token.getId()) {
-      KitIoT.logout();
-
-    } else {
-      KitIoT.start();
-      insight.track('socket', 'start');
-    }
+    KitIoT.start();
+    insight.track('socket', 'start');
   });
 
   //Stop sending/saving data
